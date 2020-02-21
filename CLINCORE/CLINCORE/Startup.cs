@@ -30,6 +30,8 @@ namespace CLINCORE
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddScoped<IDbFactory, DbFactory>();
             services.AddLogging();
+
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,7 +50,7 @@ namespace CLINCORE
 
             //app.UseHttpsRedirection();
             
-            app.UseMvc();
+            app.UseMvc( );
         }
     }
 }

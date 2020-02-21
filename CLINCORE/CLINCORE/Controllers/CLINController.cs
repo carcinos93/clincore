@@ -172,6 +172,10 @@ namespace CLINCORE.Controllers
 
         }
     
-
+        [HttpGet("/api/test")]
+        public Respuesta test()
+        {
+            return new Respuesta { message = string.Format("{0:dd/MM/yyyy hh:mm:ss tt}", DateTime.Now), error = false };
+        }
     }
 }

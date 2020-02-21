@@ -162,7 +162,8 @@
           "LONGITUD": 100,
           "RUTA": "cliente"
         }
-      ]
+      ],
+     "OUTPUT" :  []
     }
 
   ]

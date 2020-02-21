@@ -50,7 +50,7 @@ namespace CLINCORE
             var ip = "";
            
 
-            ip = @"20.30.40.8"; //parametros["IP"];
+            ip = @"CLINDEV17"; //parametros["IP"];
             var connection = new SqlConnection(
                 string.Format(connectionString, _empresa, _usuario, _password, ip)
                 );
