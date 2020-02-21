@@ -1,0 +1,169 @@
+{
+  "PROCESO": [
+    {
+      "METODO": "validacion",
+      "PROCEDIMIENTO": "[WF].[PROCESO_VALIDACION_WS]",
+      "JSON_MAP": [ "mensajes" ],
+      "PARAMETROS": [
+        {
+          "NOMBRE": "LLAVE",
+          "TIPO": "string",
+          "LONGITUD": 100,
+          "RUTA": "codigo_cliente"
+        },
+        {
+          "NOMBRE": "FLUJO",
+          "TIPO": "string",
+          "LONGITUD": 100,
+          "RUTA": "hash"
+        }
+      ],
+      "OUTPUT": [
+        {
+          "NOMBRE": "VALIDO",
+          "TIPO": "bool",
+          "LONGITUD": 100,
+          "RUTA": "valido"
+        }
+      ]
+    },
+    {
+      "METODO": "productos",
+      "PROCEDIMIENTO": "[dbo].[PROCESO_POLITICA_VARIABLE]",
+      "JSON_MAP": [ "productos" ],
+      "PARAMETROS": [
+        {
+          "NOMBRE": "CODIGO_ESTRATEGIA",
+          "TIPO": "string",
+          "LONGITUD": 100,
+          "RUTA": "estrategia"
+        },
+        {
+          "NOMBRE": "MONTO",
+          "TIPO": "decimal",
+          "LONGITUD": 100,
+          "RUTA": "monto_solicitado"
+        },
+        {
+          "NOMBRE": "SCORE",
+          "TIPO": "string",
+          "LONGITUD": 100,
+          "RUTA": "score"
+        },
+        {
+          "NOMBRE": "INGRESOS",
+          "TIPO": "decimal",
+          "LONGITUD": 100,
+          "RUTA": "ingresos"
+        },
+        {
+          "NOMBRE": "NIVEL_ENDEUDAMIENTO",
+          "TIPO": "decimal",
+          "LONGITUD": 100,
+          "RUTA": "nivel_endeudamiento"
+        },
+        {
+          "NOMBRE": "CANTIDAD_PA",
+          "TIPO": "nulo",
+          "LONGITUD": 100,
+          "RUTA": ""
+        },
+        {
+          "NOMBRE": "INGRESO_PA_MIN",
+          "TIPO": "nulo",
+          "LONGITUD": 100,
+          "RUTA": ""
+        },
+        {
+          "NOMBRE": "INCLUYE_SCORE",
+          "TIPO": "bool",
+          "LONGITUD": 100,
+          "RUTA": "incluye_score"
+        }
+      ],
+      "OUTPUT": [
+        {
+          "NOMBRE": "ERRORES",
+          "TIPO": "string",
+          "LONGITUD": 8000,
+          "RUTA": "mensaje"
+        }
+      ]
+    },
+
+    {
+      "METODO": "colector",
+      "PROCEDIMIENTO": "[dbo].[WS_COLECTOR]",
+      "JSON_MAP": [],
+      "PARAMETROS": [
+        {
+          "NOMBRE": "CODIGO_USUARIO",
+          "TIPO": "string",
+          "LONGITUD": 100,
+          "RUTA": "credencial.codigo_usuario"
+        },
+        {
+          "NOMBRE": "CLAVE_USUARIO",
+          "TIPO": "string",
+          "LONGITUD": 100,
+          "RUTA": "credencial.clave_usuario"
+        },
+        {
+          "NOMBRE": "REFERENCIA",
+          "TIPO": "string",
+          "LONGITUD": 100,
+          "RUTA": "referencia"
+        },
+        {
+          "NOMBRE": "CREDITO",
+          "TIPO": "string",
+          "LONGITUD": 100,
+          "RUTA": "credito"
+        },
+        {
+          "NOMBRE": "CUENTA_BANCO",
+          "TIPO": "string",
+          "LONGITUD": 100,
+          "RUTA": "cuenta_banco"
+        },
+        {
+          "NOMBRE": "SUCURSAL",
+          "TIPO": "string",
+          "LONGITUD": 100,
+          "RUTA": "sucursal"
+        },
+        {
+          "NOMBRE": "FECHA",
+          "TIPO": "string",
+          "LONGITUD": 100,
+          "RUTA": "fecha"
+        },
+        {
+          "NOMBRE": "MONTO_EFECTIVO",
+          "TIPO": "decimal",
+          "LONGITUD": 100,
+          "RUTA": "efectivo"
+        },
+        {
+          "NOMBRE": "MONTO_OTROS",
+          "TIPO": "decimal",
+          "LONGITUD": 100,
+          "RUTA": "otros"
+        },
+        {
+          "NOMBRE": "ANULADO",
+          "TIPO": "string",
+          "LONGITUD": 100,
+          "RUTA": "anulado"
+        },
+        {
+          "NOMBRE": "NOMBRE_CLIENTE",
+          "TIPO": "string",
+          "LONGITUD": 100,
+          "RUTA": "cliente"
+        }
+      ]
+    }
+
+  ]
+}
